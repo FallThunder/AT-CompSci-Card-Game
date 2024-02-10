@@ -1,5 +1,29 @@
 import random
 
+def modeSelect():
+    """
+    Returns the mode of the game
+    
+    Parameters:
+    - None
+    
+    Returns:
+    - mode: string
+    """
+    mode = input("Would you like to have the game fully automated, through major steps or manually? (auto/step/manual)\n")
+    if mode == "auto":
+        return "auto"
+    
+    elif mode == "step":
+        return "step"
+    
+    elif mode == "manual":
+        return "manual"
+    
+    else:
+        print("Invalid input, please try again.\n")
+        modeSelect()
+
 def dealCards():
     """
     Returns two lists of 26 tuples representing a deck of cards
